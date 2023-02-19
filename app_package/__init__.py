@@ -3,4 +3,4 @@ from flask import Flask
 
 app = Flask(__name__)
 
-from app_package.routes import index
+import app_package.views
