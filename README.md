@@ -2,13 +2,13 @@
 Cheap Goods is a p2p platform that enables local products at an affordable rate
 
 ## Web Infrastructure
-![](./infrastructure_design.PNG)
+![](.images/infrastructure_design.PNG)
 - nginx web server
 - flask web framework
 - gunicorn wsgi server
 
 ## db Schema
-![](./complete_er_diagram.PNG)
+![](.images/complete_er_diagram.PNG)
 ## application file structure
 
 ```bash
