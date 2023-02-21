@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.nav-item {
+    padding: 17px;
+    font-weight: 500px;
+    color: #011627;
+}
+
+.nav-item:hover {
+    transition: 0.4s;
+    color: #F64740;
+}
+
+.btn {
+    margin: 2px 10px;
+}

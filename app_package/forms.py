@@ -1,15 +1,15 @@
-from flask_wtf import Flaskform
-from wtforms import StringField, EmailField. PasswordField
-from wtforms.validators import DataRequired, Length, EqualTo,
-                               Email, NumberRange, SubmitField
+from flask_wtf import FlaskForm
+from wtforms import StringField, EmailField, PasswordField, SubmitField
+from wtforms.validators import DataRequired, Length, EqualTo
+from wtforms.validators import Email, NumberRange
 
 
-class register(Flaskform):
+class register(FlaskForm):
    username = StringField('username', validators=[Length(min=3, max=15),
                                                    DataRequired()])
 
    name = StringField('name', validators=[Length(min=3, max=20),
-                                           DataRrquired()])
+                                           DataRequired()])
 
    email = EmailField('email', validators=[DataRequired(), Email()])
 
@@ -24,7 +24,7 @@ class register(Flaskform):
 
    signup = SubmitField('sign up')
 
-class login(Flaskform):
+class login(FlaskForm):
     username = StringField('username', validators=[DataRequired()])
 
     pwd = PasswordField('password', validators=[DataRequired()])
