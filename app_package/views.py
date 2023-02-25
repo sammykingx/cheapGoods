@@ -27,8 +27,7 @@ def signin():
 
 @app.route('/register', strict_slashes=False, methods = ['GET', 'POST'])
 def signup():
-    reg_form = register()
-    return '<h2>Resister Page</h2>'
+    return render_template('signup.html', form=register())
 
 @app.route('/shop', strict_slashes=False)
 def shop():

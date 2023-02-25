@@ -28,3 +28,5 @@ class login(FlaskForm):
     username = StringField('username', validators=[DataRequired()])
 
     pwd = PasswordField('password', validators=[DataRequired()])
+
+    login = SubmitField('login')

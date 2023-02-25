@@ -1,22 +1,40 @@
-{% extends 'base.html' %}
-
-{% block styles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- template Design by foolishdeveloper.com -->
+    <title>CheapGoods - login</title>
+ 
     <link rel="stylesheet" href="../static/styles/login.css">
-{%endblock styles%}
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
 
-{% block body %}
-    <center> <h1> Welcome back </h1> </center>   
-    <form method="POST">
-        {{ form.csrf_token() }}  
-        <div class="container">   
-            <label>Username : </label>   
-            <input type="text" placeholder="Enter Username" name="username" required>  
-            <label>Password : </label>   
-            <input type="password" placeholder="Enter Password" name="password" required>  
-            <button type="submit">Login</button>   
-            <input type="checkbox" checked="checked"> Remember me   
-            <button type="button" class="cancelbtn"> Cancel</button>   
-            Forgot <a href="#"> password? </a>   
-        </div>   
-    </form>     
-{% endblock body%}
+</head>
+<body>
+    <div class="background">
+        <div class="shape"></div>
+        <div class="shape"></div>
+    </div>
+    <form>
+        <h3>Welcome, please login</h3>
+
+        {{ form.hidden_tag() }}
+
+        {{ form.username.label(placeholder='enter your username') }}
+        {{ form.username }}
+        {{ form.pwd.label(palceholder='enter your password') }}
+        {{ form.pwd }}
+
+        <button>Log In</button>
+        <div class="social">
+          <div class="go"><i class="fab fa-google"></i>  Google</div>
+          <div class="fb"><i class="fab fa-facebook"></i>  Facebook</div>
+        </div>
+    </form>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

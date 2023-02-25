@@ -47,8 +47,12 @@
             <form class="d-flex">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success" type="submit">Search</button>
-              <button class="btn btn-primary" type="submit"> login </button>
-              <button type="button" class="btn btn-outline-primary"> register </button>
+              <a href="{{ url_for('signin') }}">
+                  <button class="btn btn-primary" type="button"> login </button>
+              </a>
+              <a href="{{ url_for('signup') }}">
+                  <button type="button" class="btn btn-outline-primary"> register </button>
+              </a>
             </form>
           </div>
         </div>

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block styles %}
+    <link rel="stylesheet" href="../static/styles/signup.css">
+{% endblock styles %}
+
+{% block title %} CheapGoods - signup {% endblock title %}
+
+{% block body %}
+    <div id="login-box">
+        <div class="left">
+            <h1>Get started</h1>
+            <form method="POST">
+	        {{ form.username.label }}
+                {{ form.username(palceholder='max 15 characters') }}
+                {{ form.email.label }} {{ form.email }}
+                {{ form.pwd.label }} {{ form.pwd }}
+                {{ form.conf_pwd.label }} {{ form.conf_pwd }}
+                {{ form.phoneNo.label }} {{ form.phoneNo }}
+                {{ form.signup }}
+            </form>
+        </div>
+  
+       <div class="right">
+            <span class="loginwith">Sign in with<br />social network</span>
+    
+            <button class="social-signin facebook">Log in with facebook</button>
+            <button class="social-signin twitter">Log in with Twitter</button>
+            <button class="social-signin google">Log in with Google+</button>
+      </div>
+      <div class="or">OR</div>
+    </div>
+    <p style=text-align:center;>Already have an account, then
+      <a href="{{ url_for('signin') }}">login here</a>
+    </p>
+{% endblock body %}
