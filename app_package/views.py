@@ -1,6 +1,6 @@
 from app_package import app
 from app_package.forms import login, register
-from flask import render_template, url_for
+from flask import flash, render_template, redirect, request, url_for
 
 
 @app.route('/', strict_slashes=False)
@@ -27,7 +27,28 @@ def signin():
 
 @app.route('/register', strict_slashes=False, methods = ['GET', 'POST'])
 def signup():
-    return render_template('signup.html', form=register())
+    """
+        This metho is called when the route /register is hit by the client
+
+        @Args:
+             name
+        @Chks: for whitespace
+    """
+    form = register()
+    if request.method == 'POST':
+        name = request.form['name']
+        uname = request.form['username']
+        pwd = request.form['pwd']
+        ph_no = request.form['phoneNo']
+
+        if pwd != request.form['conf_pwd']:
+            flash("password don't match", "warning")
+
+        else:
+            flash("Account successfully created", "success")
+            return redirect(url_for('blog'))
+
+    return render_template('signup.html', form=form)
 
 @app.route('/shop', strict_slashes=False)
 def shop():

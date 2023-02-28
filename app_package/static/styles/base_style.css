@@ -4,6 +4,13 @@
     box-sizing: border-box;
 }
 
+.alert {
+    margin: auto;
+    width: 35%;
+    margin-top: 50px;
+    Border-radius: 10px;
+}
+
 .nav-item {
     padding: 17px;
     font-weight: 500px;

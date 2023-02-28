@@ -18,13 +18,12 @@
     </div>
     <form>
         <h3>Welcome, please login</h3>
-
         {{ form.hidden_tag() }}
 
-        {{ form.username.label(placeholder='enter your username') }}
-        {{ form.username }}
-        {{ form.pwd.label(palceholder='enter your password') }}
-        {{ form.pwd }}
+        {{ form.username.label }}
+        {{ form.username(placeholder='enter your username') }}
+        {{ form.pwd.label }}
+        {{ form.pwd (placeholder='enter your password') }}
 
         <button>Log In</button>
         <div class="social">
