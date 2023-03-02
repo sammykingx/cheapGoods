@@ -16,7 +16,7 @@ class register(FlaskForm):
 
    conf_pwd = PasswordField('re-enter Password', validators=[DataRequired()])
 
-   phoneNo = StringField('phone number',
+   phoneNo = StringField('Phone number',
 			   validators=[DataRequired(),
                            Length(max=15)])
 

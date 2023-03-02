@@ -10,6 +10,7 @@ class user(db.Model):
    name = db.Column(db.String(30), nullable=False)
    email = db.Column(db.String(30), nullable=False)
    phone = db.Column(db.String(15), nullable=False)
+   password = db.Column(db.String(30), nullable=False)
    location = db.Column(db.String(50), db.ForeignKey('location.street'))
 
 
